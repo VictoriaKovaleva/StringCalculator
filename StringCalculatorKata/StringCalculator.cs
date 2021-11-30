@@ -8,10 +8,8 @@ namespace StringCalculatorKata
         {
             if (String.IsNullOrEmpty(numbers))
                 return 0;
-            if (Convert.ToInt32(numbers) == 2)
-                return 2;
-           
-            return 1;
+
+            return (Convert.ToInt32(numbers));
         }
     }
 }
