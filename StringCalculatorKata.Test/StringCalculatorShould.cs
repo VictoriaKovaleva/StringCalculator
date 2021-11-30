@@ -48,6 +48,14 @@ namespace StringCalculatorKata.Test
             
             Assert.Equal(expected, actual);
         }
+
+        [Fact]
+        public void Return6WhenStringHas1And2And3AndNewLine()
+        {
+            int actual = StringCalculator.Sum("1\n2,3");
+            
+            Assert.Equal(6, actual);
+        }
         
-    }
+    }|
 }
