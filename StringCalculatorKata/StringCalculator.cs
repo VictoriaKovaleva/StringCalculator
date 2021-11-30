@@ -10,15 +10,11 @@ namespace StringCalculatorKata
                 return 0;
 
             var numbersArray = numbers.Replace("\n", ",").Split(",");
-            if (numbersArray.Length > 1)
-            {
-                var sum = 0;
-                foreach (var number in numbersArray) 
-                    sum += int.Parse(number);
-                return sum;
-            }
 
-            return Int32.Parse(numbersArray[0]);
+            var sum = 0;
+            foreach (var number in numbersArray)
+                sum += int.Parse(number);
+            return sum;
         }
     }
 }
