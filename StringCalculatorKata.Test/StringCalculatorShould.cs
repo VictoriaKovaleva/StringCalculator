@@ -57,5 +57,5 @@ namespace StringCalculatorKata.Test
             Assert.Equal(6, actual);
         }
         
-    }|
+    }
 }

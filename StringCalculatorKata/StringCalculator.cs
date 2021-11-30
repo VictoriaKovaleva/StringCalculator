@@ -9,7 +9,7 @@ namespace StringCalculatorKata
             if (String.IsNullOrEmpty(numbers))
                 return 0;
 
-            var numbersArray = numbers.Split(",");
+            var numbersArray = numbers.Replace("\n", ",").Split(",");
             if (numbersArray.Length > 1)
             {
                 var sum = 0;
