@@ -1,10 +1,15 @@
+using System;
+
 namespace StringCalculatorKata
 {
     public static class StringCalculator
     {
         public static int Sum(string numbers)
         {
-            return 0;
+            if (String.IsNullOrEmpty(numbers))
+                return 0;
+           
+            return 1;
         }
     }
 }
