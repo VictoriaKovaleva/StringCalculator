@@ -37,5 +37,13 @@ namespace StringCalculatorKata.Test
             
             Assert.Equal(expected, actual);
         }
+
+        [Fact]
+        public void Return35WhenStringIs10And18And7()
+        {
+            int actual = StringCalculator.Sum("10,18,7");
+            
+            Assert.Equal(35, actual);
+        }
     }
 }
