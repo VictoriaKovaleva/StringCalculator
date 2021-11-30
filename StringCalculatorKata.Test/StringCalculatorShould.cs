@@ -38,12 +38,14 @@ namespace StringCalculatorKata.Test
             Assert.Equal(expected, actual);
         }
 
-        [Fact]
-        public void Return35WhenStringIs10And18And7()
+        [Theory]
+        [InlineData("10,18,7", 35)]
+        public void ReturnSumOfAnyAmountOfNumbersOfString(string numbers, int expected)
         {
-            int actual = StringCalculator.Sum("10,18,7");
+            int actual = StringCalculator.Sum(numbers);
             
-            Assert.Equal(35, actual);
+            Assert.Equal(expected, actual);
         }
+        
     }
 }
