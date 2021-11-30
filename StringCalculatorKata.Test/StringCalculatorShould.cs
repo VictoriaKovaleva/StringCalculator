@@ -32,5 +32,14 @@ namespace StringCalculatorKata.Test
             
             Assert.Equal(1, actual);
         }
+
+        [Fact]
+        public void Return2WhenStringIs1And1()
+        {
+            int actual = StringCalculator.Sum("1,1");
+            
+            Assert.Equal(2, actual);
+
+        }
     }
 }
