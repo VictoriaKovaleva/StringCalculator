@@ -28,6 +28,9 @@ namespace StringCalculatorKata.Test
         [Theory]
         [InlineData("0,1", 1)]
         [InlineData("1, 1", 2)]
+        [InlineData("4, 6", 10)]
+        [InlineData("10, 5", 15)]
+        [InlineData("23, 15", 38)]
         public void ReturnSumOfNumbersWhenStringHasTwoNumbers(string numbers, int expected)
         {
             int actual = StringCalculator.Sum(numbers);
