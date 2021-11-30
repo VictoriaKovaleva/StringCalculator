@@ -8,9 +8,17 @@ namespace StringCalculatorKata
         {
             if (String.IsNullOrEmpty(numbers))
                 return 0;
-            if (numbers.Length > 2)
-                return Int32.Parse(numbers.Substring(2));
-            return (Convert.ToInt32(numbers));
+
+            var numbersArray = numbers.Split(",");
+            if (numbersArray.Length > 1)
+            {
+                var firstNumber = int.Parse(numbersArray[0]);
+                var secondNumber = int.Parse(numbersArray[1]);
+
+                return firstNumber + secondNumber;
+            }
+
+            return Int32.Parse(numbersArray[0]);
         }
     }
 }
