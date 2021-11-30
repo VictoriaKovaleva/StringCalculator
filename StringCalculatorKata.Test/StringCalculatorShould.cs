@@ -20,5 +20,13 @@ namespace StringCalculatorKata.Test
             
             Assert.Equal(1, actual);
         }
+
+        [Fact]
+        public void Return2WhenStringIs2()
+        {
+            int actual = StringCalculator.Sum("2");
+            
+            Assert.Equal(2, actual);
+        }
     }
 }
