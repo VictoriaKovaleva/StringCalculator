@@ -2,9 +2,9 @@ namespace StringCalculatorKata
 {
     public static class StringCalculator
     {
-        public static string Sum(string numbers)
+        public static int Sum(string numbers)
         {
-            throw new System.NotImplementedException();
+            return 0;
         }
     }
 }

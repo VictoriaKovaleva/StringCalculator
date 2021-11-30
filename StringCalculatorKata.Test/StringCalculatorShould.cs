@@ -6,11 +6,11 @@ namespace StringCalculatorKata.Test
     public class StringCalculatorShould
     {
         [Fact]
-        public void Return0WhenInputStringIsEmpty()
+        public void Return0WhenStringIsEmpty()
         {
-            string actual = StringCalculator.Sum("");
+            int actual = StringCalculator.Sum("");
             
-            Assert.Null(actual);
+            Assert.Equal(0, actual);
         }
     }
 }
