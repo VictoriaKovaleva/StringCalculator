@@ -12,10 +12,10 @@ namespace StringCalculatorKata
             var numbersArray = numbers.Split(",");
             if (numbersArray.Length > 1)
             {
-                var firstNumber = int.Parse(numbersArray[0]);
-                var secondNumber = int.Parse(numbersArray[1]);
-
-                return firstNumber + secondNumber;
+                var sum = 0;
+                foreach (var number in numbersArray) 
+                    sum += int.Parse(number);
+                return sum;
             }
 
             return Int32.Parse(numbersArray[0]);
