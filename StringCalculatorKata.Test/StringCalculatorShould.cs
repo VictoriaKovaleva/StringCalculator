@@ -25,21 +25,14 @@ namespace StringCalculatorKata.Test
 
         }
 
-        [Fact]
-        public void Return1WhenStringIs0And1()
+        [Theory]
+        [InlineData("0,1", 1)]
+        [InlineData("1, 1", 2)]
+        public void ReturnSumOfNumbersWhenStringHasTwoNumbers(string numbers, int expected)
         {
-            int actual = StringCalculator.Sum("0,1");
+            int actual = StringCalculator.Sum(numbers);
             
-            Assert.Equal(1, actual);
-        }
-
-        [Fact]
-        public void Return2WhenStringIs1And1()
-        {
-            int actual = StringCalculator.Sum("1,1");
-            
-            Assert.Equal(2, actual);
-
+            Assert.Equal(expected, actual);
         }
     }
 }
