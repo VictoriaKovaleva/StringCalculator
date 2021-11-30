@@ -40,6 +40,8 @@ namespace StringCalculatorKata.Test
 
         [Theory]
         [InlineData("10,18,7", 35)]
+        [InlineData("10,20,40,5", 75)]
+        [InlineData("100,2,305,15", 422)]
         public void ReturnSumOfAnyAmountOfNumbersOfString(string numbers, int expected)
         {
             int actual = StringCalculator.Sum(numbers);
