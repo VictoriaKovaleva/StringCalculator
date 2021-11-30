@@ -13,20 +13,16 @@ namespace StringCalculatorKata.Test
             Assert.Equal(0, actual);
         }
 
-        [Fact]
-        public void Return1WhenStringIs1()
+        [Theory]
+        [InlineData("1", 1)]
+        [InlineData("2", 2)]
+        [InlineData("3", 3)]
+        public void ReturnNumberWhenStringIsOneNumber(string number, int expected)
         {
-            int actual = StringCalculator.Sum("1");
+            int actual = StringCalculator.Sum(number);
             
-            Assert.Equal(1, actual);
-        }
+            Assert.Equal(expected, actual);
 
-        [Fact]
-        public void Return2WhenStringIs2()
-        {
-            int actual = StringCalculator.Sum("2");
-            
-            Assert.Equal(2, actual);
         }
     }
 }
