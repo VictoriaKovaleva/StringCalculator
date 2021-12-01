@@ -14,18 +14,20 @@ namespace StringCalculatorKata
 
             var sum = 0;
 
-            if (numbers.Contains("//"))
+            if (numbers.Contains(";"))
             {
-                var index = numbers.IndexOf('1');
-                string[] nextLineArray = numbers.Substring(index).Split(";");
+                var index = numbers.IndexOf('\n');
+                string[] nextLineArray = numbers.Substring(index + 1).Split(";");
                 foreach (var number in nextLineArray)
                     sum += int.Parse(number);
             }
 
-            if (!numbers.Contains("//"))
-            foreach (var number in numbersArray)
-                sum += int.Parse(number);
-            
+            if (!numbers.Contains(";"))
+            {
+                foreach (var number in numbersArray)
+                    sum += int.Parse(number);
+            }
+
             return sum;
         }
     }
