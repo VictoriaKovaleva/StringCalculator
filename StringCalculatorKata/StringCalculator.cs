@@ -1,4 +1,5 @@
 using System;
+using System.Text.RegularExpressions;
 
 namespace StringCalculatorKata
 {
@@ -12,8 +13,19 @@ namespace StringCalculatorKata
             var numbersArray = numbers.Replace("\n", ",").Split(",");
 
             var sum = 0;
+
+            if (numbers.Contains("//"))
+            {
+                var index = numbers.IndexOf('1');
+                string[] nextLineArray = numbers.Substring(index).Split(";");
+                foreach (var number in nextLineArray)
+                    sum += int.Parse(number);
+            }
+
+            if (!numbers.Contains("//"))
             foreach (var number in numbersArray)
                 sum += int.Parse(number);
+            
             return sum;
         }
     }
