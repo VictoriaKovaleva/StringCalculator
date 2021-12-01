@@ -73,7 +73,7 @@ namespace StringCalculatorKata.Test
         {
             Action action = () => StringCalculator.Sum("-2");
 
-            Assert.Throws<ArgumentException>("negatives not allowed -2", action);
+            Assert.Throws<ArgumentException>(action);
         }
 
     }
