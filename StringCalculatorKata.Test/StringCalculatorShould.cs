@@ -22,7 +22,6 @@ namespace StringCalculatorKata.Test
             int actual = StringCalculator.Sum(number);
             
             Assert.Equal(expected, actual);
-
         }
 
         [Theory]

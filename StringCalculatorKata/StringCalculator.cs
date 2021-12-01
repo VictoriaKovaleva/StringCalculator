@@ -9,25 +9,16 @@ namespace StringCalculatorKata
         {
             if (String.IsNullOrEmpty(numbers))
                 return 0;
-
+            
+            var sum = 0;
             var numbersArray = numbers.Replace("\n", ",").Split(",");
 
-            var sum = 0;
-
             if (numbers.Contains(";"))
-            {
-                var index = numbers.IndexOf('\n');
-                string[] nextLineArray = numbers.Substring(index + 1).Split(";");
-                foreach (var number in nextLineArray)
-                    sum += int.Parse(number);
-            }
+                numbersArray = numbers.Substring(numbers.IndexOf('\n') + 1).Split(";");
 
-            if (!numbers.Contains(";"))
-            {
-                foreach (var number in numbersArray)
-                    sum += int.Parse(number);
-            }
-
+            foreach (var number in numbersArray)
+                sum += int.Parse(number);
+            
             return sum;
         }
     }
