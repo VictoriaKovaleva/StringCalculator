@@ -68,6 +68,13 @@ namespace StringCalculatorKata.Test
             Assert.Equal(expected, actual);
         }
 
+        [Fact]
+        public void ReturnExceptionIfStringContainsANegativeNumber()
+        {
+            Action action = () => StringCalculator.Sum("-2");
+
+            Assert.Throws<ArgumentException>("negatives not allowed -2", action);
+        }
 
     }
 }
