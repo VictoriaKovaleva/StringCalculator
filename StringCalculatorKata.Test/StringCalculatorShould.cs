@@ -49,21 +49,15 @@ namespace StringCalculatorKata.Test
             Assert.Equal(expected, actual);
         }
 
-        [Fact]
-        public void Return6WhenStringHas1And2And3AndNewLine()
+        [Theory]
+        [InlineData("1\n2,3", 6)]
+        [InlineData("10\n30,2\n7", 49)]
+        public void ReturnSumOfAnyAmountOfNumbersAndNewLinesOfString(string numbers, int expected)
         {
-            int actual = StringCalculator.Sum("1\n2,3");
+            int actual = StringCalculator.Sum(numbers);
             
-            Assert.Equal(6, actual);
+            Assert.Equal(expected, actual);
         }
-        
-        [Fact]
-        public void Return49WhenStringHas10And30And2And7AndTwoNewLines()
-        {
-            int actual = StringCalculator.Sum("10\n30,2\n7");
-            
-            Assert.Equal(49, actual);
-        }
-        
+       
     }
 }
