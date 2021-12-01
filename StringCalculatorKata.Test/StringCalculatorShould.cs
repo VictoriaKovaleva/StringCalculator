@@ -68,13 +68,16 @@ namespace StringCalculatorKata.Test
             Assert.Equal(expected, actual);
         }
 
-        [Fact]
-        public void ReturnExceptionIfStringContainsANegativeNumber()
+        [Theory]
+        [InlineData("-2")]
+        [InlineData("1,-3,-5,4")]
+        [InlineData("//;\n3;2;-2")]
+        [InlineData("8\n3,2,-2,-1")]
+        public void ThrowExceptionAndNegativeNumbersIfStringHasNegativeNumbers(string numbers)
         {
-            Action action = () => StringCalculator.Sum("-2");
+            Action action = () => StringCalculator.Sum(numbers);
 
             Assert.Throws<ArgumentException>(action);
         }
-
     }
 }
