@@ -57,5 +57,13 @@ namespace StringCalculatorKata.Test
             Assert.Equal(6, actual);
         }
         
+        [Fact]
+        public void Return49WhenStringHas10And30And2And7AndTwoNewLines()
+        {
+            int actual = StringCalculator.Sum("10\n30,2\n7");
+            
+            Assert.Equal(49, actual);
+        }
+        
     }
 }
