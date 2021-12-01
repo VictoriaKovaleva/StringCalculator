@@ -58,6 +58,13 @@ namespace StringCalculatorKata.Test
             
             Assert.Equal(expected, actual);
         }
-       
+
+        [Fact] public void Return3WhenStringHas1And2AndSeparateLIneWhereDelimiterIsSemicolon()
+        {
+            int actual = StringCalculator.Sum("//;\n1;2");
+            
+            Assert.Equal(3, actual);
+        }
+        
     }
 }
